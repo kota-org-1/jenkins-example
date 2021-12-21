@@ -1,9 +1,9 @@
 pipeline {
-	agent {  label 'ec2-linux-node' }
+	agent {  label 'linux-node' }
 	stages {
 		stage('---clean---'){
 			tools {
-				maven 'maven3.8.3'
+				maven 'mvn-3.8.4'
 			}
 			steps {
 				
@@ -12,7 +12,7 @@ pipeline {
 		}
 		stage('---test---') {
 			tools {
-				maven 'maven3.8.2'
+				maven 'mvn-3.8.3'
 			}
 			steps {
 				
